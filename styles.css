@@ -1,0 +1,65 @@
+@font-face{
+    font-family: MavinPro;
+    src: url(MavinPro-VariableFont-wght.ttf)
+}
+.Mavinstyle{
+    font-family: 'MavinPro',Arial, sans-serif;
+    font-weight: normal;
+    font-style: normal;
+}
+hr{
+border-top: 2px solid black;
+}
+.primColor1{
+    background-color: #001844;
+    color: white;
+}
+.primColor2{
+    background-color: #cd1543;
+    color: white;
+}
+.secondarycol{
+    background-color: #869ec3;
+    color: white;
+}
+
+.secondarycol2{
+    background-color: #cfd1d3;
+    color: white;
+}
+.sbt {
+    padding: 10px 14px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
+.sbt:focus, .sbt:active:focus, .sbt.active:focus {
+    outline: 0 none;
+}
+
+.btn-EpiPrim{
+    background: #001844;
+    color: #ffffff;
+}
+.btn-EpiPrim:hover, .btn-EpiPrim:focus, .btn-EpiPrim:active, .btn-EpiPrim.active, .open > .dropdown-toggle.btn-EpiPrim {
+    background: #042664;
+}
+ 
+.btn-EpiPrim:active, .btn-EpiPrim.active {
+    background: #007299;
+    box-shadow: none;
+}
+
+.btn-EpiPrim2{
+    background: #cd1543;
+    color: #ffffff;
+}
+.btn-EpiPrim2:hover, .btn-EpiPrim2:focus, .btn-EpiPrim2:active, .btn-EpiPrim2.active, .open > .dropdown-toggle.btn-EpiPrim2 {
+    background: #d31746;
+}
+ 
+.btn-EpiPrim2:active, .btn-EpiPrim2.active {
+    background: #fc1b53;
+    box-shadow: none;
+}

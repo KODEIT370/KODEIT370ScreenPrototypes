@@ -1,0 +1,162 @@
+
+<!DOCTYPE html>
+<html>
+    <header>
+        <link rel="stylesheet" href="styles.css">
+        <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        
+        <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css" integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk" crossorigin="anonymous">
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+        <script src="https://kit.fontawesome.com/76d9c146db.js" crossorigin="anonymous"></script>
+    
+    </header>
+    <body class="Mavinstyle">
+        <nav class="navbar navbar-expand-sm primColor1 navbar-dark">
+            <a class="navbar-brand" href="#">CrudTemplate </a>
+            <ul class="navbar-nav">
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entry1</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entry2</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#">Entry3</a>
+              </li>
+            </ul>
+          </nav> 
+          <div class="container">
+            <br>
+            <h1>Update Service Item</h1>
+            <hr>
+            <label><b>Description: </b></label>
+            <input type="text" class="form-control" value="Basic Wash" style="width: 30%;"><br>
+            <label><b>Price: </b></label>
+            <input type="text" class="form-control" value="R 20,00" style="width: 30%;"><br>
+            <label><b>Stock Items Required:</b></label>
+            
+              <table style="padding: 10px;box-shadow: 5px 10px 8px #888888; width:80.8% " class="table table-hover table-striped">
+                <!-- <caption>List of stock items used in this service item.</caption> -->
+                <thead class="secondarycol2">
+                  <tr>
+                    <td><button class="btn btn-primary" data-toggle="modal"
+                      data-target="#AddStockModal">Add</button></td>
+                    <td></td>
+                    <td colspan="2">
+                      <form class="form-inline d-flex justify-content-center md-form form-sm mt-0">
+                        <i class="fas fa-search" aria-hidden="true"></i>
+                        <input class="form-control form-control-sm ml-3 w-60" type="text" placeholder="Search" aria-label="Search">
+                      </form>
+                    </td>
+                  </tr>
+                </thead>
+                <thead class="primColor1">
+                  <tr>
+                    <th style="width: 32%">Stock Item</th>
+                    <th style="text-align: center; width: 28%">Quantity Required</th>
+                    <th style="text-align: center; width: 22%">Price</th>
+                    <th style="text-align: center; width: 18%">Remove</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr>
+                    <td>Car Shampoo</td>
+                    <td style="text-align: center;">0.2</td>
+                    <td style="text-align: center;">R 40,00</td>
+                    <td style="text-align: center;"><button class="sbt btn-EpiPrim2 btn-sm" data-toggle="modal"
+                        data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
+                  </tr>
+                  <tr>
+                    <td>Dashboard Wax</td>
+                    <td style="text-align: center;">3</td>
+                    <td style="text-align: center;">R 50,00</td>
+                    <td style="text-align: center;"><button class="sbt btn-EpiPrim2 btn-sm" data-toggle="modal"
+                        data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
+                  </tr>
+                </tbody>
+                <tfoot class="secondarycol">
+                  <tr>
+                    <td>TOTAL: R 90,00</td>
+                    <th></th>
+                    <th></th>
+                    <th></th>
+                  </tr>
+            
+                </tfoot> 
+              </table>
+              <br>
+                <button class="sbt btn-EpiPrim ">Add Service Item</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
+            </div>
+              
+
+            <!-- Modals -->
+            <!-- Delete Modal -->
+
+            <div class="modal fade modal-danger" id="DeleteModal"tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header bg-danger text-light">
+                    <h5 class="modal-title">Warning!</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <p>You are about to remove a <b>service item</b>. Are you sure you want to do that?</p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-danger">Yes</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+
+            <!-- Add Modal -->
+            <div class="modal fade" id="AddStockModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+              <div class="modal-dialog modal-dialog-centered role="document">
+                <div class="modal-content">
+                  <div class="modal-header">
+                    <h5 class="modal-title" id="exampleModalLabel">Stock Items</h5>
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                    <div class="container">
+                      <table class="table table-striped width:80%">
+                        <thead class="primColor1">
+                          <tr>
+                            <th>Stock Item</th>
+                            <th style="text-align: center;">Add</th>
+                          </tr>
+                        </thead>
+                        <tbody>
+                          <tr>
+                            <td>Car Shampoo</td>
+                            <td style="text-align: center;"><input type="checkbox" class="checkboxSize" value="">
+                            </td>
+                          </tr>
+                          <tr>
+                            <td>Dashboard Wax</td>
+                            <td style="text-align: center;"><input type="checkbox" class="checkboxSize" value="">
+                          </tr>
+                          <tr>
+                            <td>Vacuum Cleaner</td>
+                            <td style="text-align: center;"><input type="checkbox" class="checkboxSize" value="">
+                          </tr>
+                        </tbody>
+                      </table>
+                    </div>
+                  <div class="modal-footer">
+                    <button type="button" class="btn btn-primary">Add</button>
+                    <button type="button" class="btn btn-secondary" data-dismiss="modal">Cancel</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+              </body>
+              
+              </html>

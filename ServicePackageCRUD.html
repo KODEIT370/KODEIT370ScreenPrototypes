@@ -35,7 +35,7 @@
             <caption>List of Service Packages</caption>
             <thead class="secondarycol2">
                 <tr>
-                <td><button class="btn btn-primary">Add</button></td>
+                <td><button class="sbt btn-EpiPrim">Add</button></td>
                 <td></td>
                 <td></td>
                 
@@ -51,7 +51,7 @@
             <thead class="primColor1">
               <tr>
                 <th scope="col-1">Package</th>
-                <th scope="col-3">Items</th>
+                <th scope="col-3">Service Items</th>
                 <th scope="col-3">Total Cost</th>
                 
                 <th scope="col-2"style="text-align: center;">Update or remove</th>
@@ -60,25 +60,25 @@
             <tbody>
               <tr>
                 <td>Base Package</td>
-                <td>Exterior and interior clean</td>
+                <td><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#InfoModal"><i class="fas fa-info-circle"></i></button></td>
                 <td>R50</td>
                 
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
               <tr>
                 <td>Express Package</td>
-                <td>Exterior, interior and polish</td>
+                <td><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#InfoModal"><i class="fas fa-info-circle"></i></button></td>
                 <td>R100</td>
                
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
               <tr>
                 <td>Vallet</td>
-                <td>Exterior, interior, polish, delivery to address</td>
+                <td><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#InfoModal"><i class="fas fa-info-circle"></i></button></td>
                 <td>R200</td>
                 
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>
-                  &nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
+                  <button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
             </tr>
             </tbody>
             <tfoot class="secondarycol">
@@ -107,20 +107,27 @@
             <div class="container">
             <label>Package: </label>
             <input type="text" class="form-control" value="Base Package">
-            <label>Items: </label>
+            <br>
+            <label>Total Cost: </label>
+            <input type="text" class="form-control" value="R50">
+            <br>
+            <label>Service Items: </label>
             <br>
             <!-- <input type="text" class="form-control" value="Exterior and interior clean"> -->
             <input type="checkbox" name="vehicle1" value="Bike">
-            <label for="vehicle1"> Exterior polish</label>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+            <label for="vehicle1"> Exterior polish</label><br>
             <input type="checkbox" name="vehicle1" value="Bike" checked>
             <label for="vehicle1"> Interior clean</label><br>
 
             <input type="checkbox" name="vehicle2" value="Car" checked>
-            <label for="vehicle2"> Extrerior clean</label><br>
+            <label for="vehicle2"> Exterior clean</label><br>
             <input type="checkbox" name="vehicle3" value="Boat" >
-            <label for="vehicle3"> Tyre polish</label><br>
-            <label>Total Cost: </label>
-            <input type="text" class="form-control" value="R50">
+            <label for="vehicle3"> Tyre polish</label>
+            <br>
+            <br>
+            <p>Subtotal of service items: R60</p>
+              
+            
 
           </div>
           </div>
@@ -147,6 +154,51 @@
           <div class="modal-footer">
             <button type="button" class="btn btn-danger">Yes</button>
             <button type="button" class="btn btn-primary" data-dismiss="modal">Close</button>
+          </div>
+        </div>
+      </div>
+    </div>
+
+
+    <div class="modal fade" id="InfoModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered role="document">
+        <div class="modal-content">
+          <div class="modal-header">
+            <h5 class="modal-title" id="exampleModalLabel">Information</h5>
+            <button type="button" class="close" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <div class="container">
+            <label>Package: </label>
+            <input type="text" class="form-control" value="Base Package" readonly>
+            <br>
+            <label>Total Cost: </label>
+            <input type="text" class="form-control" value="R50" readonly>
+            <br>
+            <label>Service Items: </label>
+            <br>
+            <!-- <input type="text" class="form-control" value="Exterior and interior clean"> -->
+            <input type="checkbox" id="serviceItem1" disabled>
+            <label for="serviceItem1"> Exterior polish</label><br>
+            <input type="checkbox" id="serviceItem2" checked disabled>
+            <label for="serviceItem2"> Interior clean</label><br>
+            <input type="checkbox" id="serviceItem3" checked disabled>
+            <label for="serviceItem3"> Exterior clean</label><br>
+            <input type="checkbox" id="serviceItem4" disabled>
+            <label for="serviceItem4"> Tyre polish</label>
+            <br>
+            <br>
+            <p>Subtotal of selected service items: R60</p>
+              
+            
+
+          </div>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="btn btn-secondary" data-dismiss="modal">Close</button>
+            
           </div>
         </div>
       </div>

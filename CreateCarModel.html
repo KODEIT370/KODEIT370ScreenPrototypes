@@ -28,31 +28,51 @@
           </nav> 
           <div class="container">
             <br>
-            <h1>Create Car</h1>
+            <h1>Create Car Model</h1>
             <hr>
             <br>
             <label><b>Car model: </b></label>
-            <input type="text" class="form-control" value="Hilux" style="width: 30%;">
+            <input type="text" class="form-control" placeholder="Enter Car Model..." style="width: 40%;">
             <br><label><b>Car make:</b></label><br>
-            <select class="browser-default custom-select" style="width: 30%;">
-              <option selected>Car make</option>
-              <option value="1">Toyota</option>
+            <select class="browser-default custom-select" style="width: 40%;">
+              <option selected>Toyota</option>
+              <option value="1">Volvo</option>
               <option value="2">Jeep</option>
               <option value="3">Mercedes</option>
             </select><br>
             <br><label><b>Car Type:</b></label><br>
-              <select class="browser-default custom-select" style="width: 30%;">
-                <option selected>Car Type</option>
-                <option value="1">Hatchback</option>
+              <select class="browser-default custom-select" style="width: 40%;">
+                <option selected>Hatchback</option>
+                <option value="1">Truck</option>
                 <option value="2">SUV</option>
-                <option value="3">Truck</option>
               </select><br>
-            
-            <br>
-              <br>
+              <br><br><br><br>
 
-              <button class="sbt btn-EpiPrim ">Add</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
+              <button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#ConfirmModal">Add Car Model</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
             </div>
+
+            <!-- Confirm Modal -->
+            
+            <div class="modal fade modal-danger" id="ConfirmModal"tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header primColor1 text-light">
+                    <h5 class="modal-title"><i class="fas fa-info-circle"></i> Confirmation</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <p> You are about to commit a change in the system. <br>
+                       Are you sure you want to implement this change? </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="sbt btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="sbt btn-EpiPrim">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>  
 
     </body>
 </html>

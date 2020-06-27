@@ -86,4 +86,7 @@ border-top: 2px solid black;
     background: #9aacc7;
     box-shadow: none;
 }
-
+.checkBox {
+    transform: scale(1.4);
+    margin: 10px;
+}

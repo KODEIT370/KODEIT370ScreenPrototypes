@@ -27,12 +27,11 @@
       </nav> 
     <div class="container">
         <br>
-        <h1>Cars</h1>
-        <hr>
-        <br><br>
+        <h1>Car Models</h1>
+        <hr><br>
 
         <table style="padding: 10px;box-shadow: 5px 10px 8px #888888; width:90%" class="table table-hover table-striped">
-            <caption>List of Cars</caption>
+            <!-- <caption>List of Cars</caption> -->
             <thead class="secondarycol2">
                 <tr>
                 <td><button class="btn btn-primary">Add</button></td>
@@ -49,36 +48,27 @@
             </thead>
             <thead class="primColor1">
               <tr>
-                <th scope="col-2">Car Model: </th>
-                <th scope="col-4">Car Make: </th>
-                <th scope="col-4">Car Type: </th>
-                <th scope="col-2"style="text-align: center;">Update or remove</th>
+                <th style="width: 22%">Car Make </th>
+                <th style="width: 30%">Car Model </th>
+                <th style="width: 20%">Car Type </th>
+                <th style="text-align: center;"  style="width: 28%">Update or remove</th>
               </tr>
             </thead>
             <tbody>
               <tr>
-                <td>Hilux</td>
                 <td>Toyota</td>
+                <td>Hilux</td>
                 <td>Truck</td>
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
               <tr>
-                <td>Etios</td>
                 <td>Toyota</td>
+                <td>Etios</td>
                 <td>Hatchback</td>
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
                
             </tbody>
-            <tfoot class="secondarycol">
-                <tr>
-                    <td></td>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                
-            </tfoot>
           </table>
     </div>
     <!-- Modal -->

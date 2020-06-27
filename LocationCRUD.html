@@ -9,6 +9,7 @@
     <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.0/js/bootstrap.min.js" integrity="sha384-OgVRvuATP1z7JjHLkuOU7Xw704+h835Lr+6QL9UvYjZE3Ipu6Tp75j7Bh/kR0JKI" crossorigin="anonymous"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="https://kit.fontawesome.com/76d9c146db.js" crossorigin="anonymous"></script>
+    
 </header>
 <body class="Mavinstyle">
     <nav class="navbar navbar-expand-sm primColor1 navbar-dark">
@@ -25,17 +26,17 @@
           </li>
         </ul>
       </nav> 
-    <div class="container">
+    <div class="container" >
         <br>
         <h1>Locations</h1>
         <hr>
-        <br><br>
+        <br>
 
-        <table style="padding: 10px;box-shadow: 5px 10px 8px #888888; width:90%" class="table table-hover table-striped">
-            <caption>List of Office Park Locations</caption>
+        <table style="padding: 10px;box-shadow: 5px 10px 8px #888888; width:100%;" class="table table-hover table-striped">
+            <!-- <caption>List of Office Park Locations</caption> -->
             <thead class="secondarycol2">
                 <tr>
-                <td><button class="btn btn-primary">Add</button></td>
+                <td><button class="btn btn-primary" data-toggle="modal">Add</button></td>
                 <td></td>
                 <td></td>
                     <td>
@@ -49,39 +50,53 @@
             </thead>
             <thead class="primColor1">
               <tr>
-                <th scope="col-2">Name: </th>
-                <th scope="col-4"> Address: </th>
-                <th scope="col-4">Active Washing Days: </th>
-                <th scope="col-2"style="text-align: center;">Update or remove</th>
+                <th style="width: 22%">Name </th>
+                <th style="width: 30%"> Address </th>
+                <th style="width: 20%">Active Washing Days </th>
+                <th style="text-align: center;" style="width: 28%">Update or remove</th>
               </tr>
             </thead>
             <tbody>
               <tr>
                 <td>EPI-USE Labs</td>
                 <td>48 Ingersol Road, Pretoria</td>
-                <td>Mon, Tue, Wed, Fri </td>
+                <td><button class="sbt btn-secondary" data-toggle="modal" data-target="#LocationInfoModal"><i class="fa fa-info-circle" aria-hidden="true"></i> Available Days</button></td>
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
               <tr>
                 <td>EPI-USE Africa</td>
                 <td>46 Ingersol Rd, Lynnwood Glen, Pretoria</td>
-                <td>Tue, Wed, Fri</td>
+                <td><button class="sbt btn-secondary" data-toggle="modal" data-target="#LocationInfoModal"><i class="fa fa-info-circle" aria-hidden="true"></i> Available Days</button></td>
                 <td style="text-align: center;"><button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#UpdateModal"><i class="fas fa-pencil-alt"></i></button>&nbsp;<button class="sbt btn-EpiPrim2" data-toggle="modal" data-target="#DeleteModal"><i class="far fa-trash-alt"></i></button></td>
               </tr>
                
             </tbody>
-            <tfoot class="secondarycol">
-                <tr>
-                    <td></td>
-                    <th></th>
-                    <th></th>
-                    <th></th>
-                </tr>
-                
-            </tfoot>
           </table>
+      </div>
+    <!-- Modals -->
+    <div class="modal fade modal-danger" id="LocationInfoModal"tabindex="-1" role="dialog">
+      <div class="modal-dialog modal-dialog-centered" role="document">
+        <div class="modal-content">
+          <div class="modal-header primColor1 text-light">
+            <h5 class="modal-title">Active Washing Days</h5>
+            <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+              <span aria-hidden="true">&times;</span>
+            </button>
+          </div>
+          <div class="modal-body">
+            <p> Days of the week in which bookings can be made for this location:
+              <li>Mondays</li>
+              <li>Tuesdays</li>
+              <li>Fridays</li>
+            </p>
+          </div>
+          <div class="modal-footer">
+            <button type="button" class="sbt btn-EpiPrim" data-dismiss="modal">Ok</button>
+          </div>
+        </div>
+      </div>
     </div>
-    <!-- Modal -->
+    <!-- Update Modal -->
     <div class="modal fade" id="UpdateModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel" aria-hidden="true">
       <div class="modal-dialog modal-dialog-centered role="document">
         <div class="modal-content">
@@ -106,6 +121,7 @@
               </div>
               <div class="checkbox">
                 <label><input type="checkbox" value="">  Wednesdays</label>
+              </div>
               <div class="checkbox">
                 <label><input type="checkbox" value="">  Thursdays</label>
               </div>
@@ -121,18 +137,20 @@
         </div>
       </div>
     </div>
+<!-- Delete Modal -->
+    
 
-    <div class="modal fade modal-danger" id="DeleteModal" tabindex="-1" role="dialog">
+    <div class="modal fade modal-danger" id="DeleteModal"tabindex="-1" role="dialog">
       <div class="modal-dialog modal-dialog-centered" role="document">
         <div class="modal-content">
           <div class="modal-header bg-danger text-light">
-            <h5 class="modal-title">Warning!!!</h5>
+            <h5 class="modal-title">Warning</h5>
             <button type="button" class="close" data-dismiss="modal" aria-label="Close">
               <span aria-hidden="true">&times;</span>
             </button>
           </div>
           <div class="modal-body">
-            <p>You are about to remove a entry. Are you sure you want to do that?</p>
+            <p>You are about to remove a <b>service item</b>. <br>Are you sure you want to do that?</p>
           </div>
           <div class="modal-footer">
             <button type="button" class="btn btn-danger">Yes</button>
@@ -141,5 +159,8 @@
         </div>
       </div>
     </div>
+
+ 
+          
 </body>
 </html>

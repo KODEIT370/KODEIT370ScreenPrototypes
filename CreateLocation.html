@@ -26,15 +26,14 @@
               </li>
             </ul>
           </nav> 
-          <div class="container">
+          <div class="container" >
             <br>
             <h1>Create New Location</h1>
             <hr>
-            <br>
             <label><b>Name: </b></label>
-            <input type="text" class="form-control" value="Epi-Use Labs" style="width: 30%;"><br>
+            <input type="text" class="form-control" placeholder="Enter a Location Name..." style="width: 30%;"><br>
             <label><b>Address: </b></label>
-            <input type="text" class="form-control" value="48 Ingersol Road, Pretoria" style="width: 30%;"><br>
+            <input type="text" class="form-control" placeholder="Enter a Location Address..." style="width: 30%;"><br>
             <!-- <label>Dropdown Template:</label><br>
             <select class="browser-default custom-select" style="width: 30%;">
                 <option selected>Dropdown Temp</option>
@@ -46,18 +45,19 @@
               
               <label><b>Active Washing Days: </b></label>
               <div class="checkbox">
-                <label><input type="checkbox" value="">  Mondays</label>
+                <label><input type="checkbox" value="" class="checkBox">  Mondays</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" value="">  Tuesdays</label>
+                <label><input type="checkbox" value="" class="checkBox">  Tuesdays</label>
               </div>
               <div class="checkbox">
-                <label><input type="checkbox" value="">  Wednesdays</label>
-              <div class="checkbox">
-                <label><input type="checkbox" value="">  Thursdays</label>
+                <label><input type="checkbox" value="" class="checkBox">  Wednesdays</label>
               </div>
-              <div class="checkbox disabled">
-                <label><input type="checkbox" value="">  Fridays</label>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" class="checkBox">  Thursdays</label>
+              </div>
+              <div class="checkbox">
+                <label><input type="checkbox" value="" class="checkBox">  Fridays</label>
               </div><br>
              <!-- <label><input type="checkbox" value="">  Saturdays</label>
             <div class="checkbox">
@@ -69,10 +69,33 @@
                 <label class="custom-control-label" for="defaultGroupExample1">Mondays</label>
               </div>-->
               
-              
-              <button class="sbt btn-EpiPrim ">Add Location</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
+              <div>
+              <button class="sbt btn-EpiPrim" data-toggle="modal" data-target="#ConfirmModal">Add Location</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
               </div>
               <br>
-              </body>
-              
-              </html>
+            
+<!-- Modals -->
+<!-- Confirm Modal -->
+            <div class="modal fade modal-danger" id="ConfirmModal"tabindex="-1" role="dialog">
+              <div class="modal-dialog modal-dialog-centered" role="document">
+                <div class="modal-content">
+                  <div class="modal-header primColor1 text-light">
+                    <h5 class="modal-title"><i class="fas fa-info-circle"></i> Confirmation</h5>
+                    <button type="button" class="close text-light" data-dismiss="modal" aria-label="Close">
+                      <span aria-hidden="true">&times;</span>
+                    </button>
+                  </div>
+                  <div class="modal-body">
+                      <p> You are about to commit a change in the system. <br>
+                      Are you sure you want to implement this change? </p>
+                  </div>
+                  <div class="modal-footer">
+                    <button type="button" class="sbt btn-secondary" data-dismiss="modal">No</button>
+                    <button type="button" class="sbt btn-EpiPrim">Yes</button>
+                  </div>
+                </div>
+              </div>
+            </div>
+</div>
+</body>
+</html>

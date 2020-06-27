@@ -28,18 +28,27 @@
           </nav> 
           <div class="container">
             <br>
-            <h1>Change Loyalty Point limit</h1>
+            <h1>Loyalty Points settings</h1>
             <hr>
             <br><br>
-            <h3>Current Point Limit: 5</h3>
+            
+            <label>Current point limit: </label>
+            <input type="number" class="form-control" value="5" style="width: 30%;" readonly>
             <br>
-            <label>New limit: </label>
-            <input type="number" class="form-control" value="5" style="width: 30%;">
-
+            <label>New point limit: </label>
+            <input type="number" class="form-control" value="10" style="width: 30%;">
+            <br>
+            <label>Service package eligible for voucher redemption: </label><br>
+            <select class="browser-default custom-select" style="width: 30%;">
+              <option selected>Basic Wash</option>
+              <option value="1">Supreme Wash</option>
+              <option value="2">Elite Wash</option>
+              <option value="3">Valet</option>
+            </select>
 
     
               <br><br>
-              <button class="sbt btn-EpiPrim ">Confirm</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
+              <button class="sbt btn-EpiPrim ">Save</button>&nbsp;<button class="sbt btn-EpiPrim2">Cancel</button>
             </div>
 
     </body>

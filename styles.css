@@ -2,12 +2,46 @@
     font-family: MavinPro;
     src: url(MavinPro-VariableFont-wght.ttf)
 }
+.TableHead {
+    
+    border-collapse: collapse !important;
+    width: 100% !important;
+    padding: 20px !important;
+    box-shadow: 5px 20px 5px #888888 !important;
+    margin-right: auto !important;
+    margin-left: auto !important;
+    border-radius: 10px !important;
+
+    }   
+.Smallrow {
+        width: 10% !important;
+    }   
+.tableBody {
+    background-color: rgba(255, 253, 253, 0.966) !important;
+    border-collapse: collapse !important;
+    width: 100% !important;
+    padding: 50px !important;
+    box-shadow: 5px 8px 5px #888888 !important;
+   }
+
+th, td,tr {
+    padding: 15px !important;
+    text-align: left !important;
+     
+   }
+.HLTR:hover{
+      background-color: #e9e9e9 !important; 
+   }
 .Mavinstyle{
     font-family: 'MavinPro',Arial, sans-serif;
     font-weight: normal;
     font-style: normal;
 }
-
+table{
+    margin-right: auto;
+    margin-left: auto;
+    border-radius: 10px;
+}
 hr{
 border-top: 2px solid black;
 }
@@ -36,6 +70,13 @@ border-top: 2px solid black;
     text-transform: uppercase;
     border-radius: 20px;
 }
+.sbtSquare {
+    padding: 10px 14px;
+    border: 0 none;
+    font-weight: 700;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+}
 .sbt {
     padding: 10px 14px;
     border: 0 none;
@@ -56,7 +97,7 @@ border-top: 2px solid black;
 }
  
 .btn-EpiPrim:active, .btn-EpiPrim.active {
-    background: #004b64;
+    background: #007299;
     box-shadow: none;
 }
 
@@ -79,7 +120,7 @@ border-top: 2px solid black;
 }
 .btn-EpiSec:hover, .btn-EpiSec:focus, .btn-EpiSec:active, .btn-EpiSec.active, .open > .dropdown-toggle.btn-EpiSec {
     background: #8fa9d1;
-
+    color: lightgray;
 }
  
 .btn-EpiSec:active, .btn-EpiSec.active {
@@ -89,4 +130,15 @@ border-top: 2px solid black;
 .checkBox {
     transform: scale(1.4);
     margin: 10px;
+}
+.mainprogress div{
+    padding:0;
+    margin:0;
+    float: left;
+   }
+
+.btn-sml {
+    padding: 4px 8px;
+    font-size: 8px;
+
 }

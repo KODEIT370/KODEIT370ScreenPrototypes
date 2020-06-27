@@ -142,3 +142,59 @@ border-top: 2px solid black;
     font-size: 8px;
 
 }
+.loginDiv {
+    padding: 20px 20px;
+    text-align: center;
+    background: #ffffff;
+    padding: 60px !important;
+    box-shadow: 5px 8px 5px #140133 !important;
+    margin: auto;
+    margin-top: 40px;
+    width: 45%;
+}
+.loginButton{
+    background: #001844;
+    color: #ffffff;
+    border: none;
+    padding: 15px 49px;
+    font-size: 18px;
+    border-radius: 100px;
+}
+.loginOTP{
+    padding: 10px 14px;
+    border: 0 none;
+    font-weight: 600;
+    letter-spacing: 1px;
+    text-transform: uppercase;
+    border-radius: 20px;
+    background: #a5acb6;
+    color: black;
+    border-radius: 19px;
+    padding: 10px 20px;
+}
+.btn-SubmitOTP{
+    background: #001844;
+    color: #ffffff;
+    border-radius: 80px;
+    padding: 16px 30px;
+    margin:5px;
+}
+.btn-cancelOTP{
+    background: #cd1543;
+    color: #ffffff;
+    border-radius: 80px;
+    padding: 16px 30px;
+    margin:5px;
+}
+.loginOTP:hover, .loginOTP:focus, .loginOTP:active, .loginOTP.active, .open > .dropdown-toggle.loginOTP {
+    background: #bfc6cf;
+}
+.btn-cancelOTP:hover, .btn-cancelOTP:focus, .btn-cancelOTP:active, .btn-cancelOTP.active, .open > .dropdown-toggle.btn-cancelOTP {
+    background: #b8405e;
+}
+.btn-SubmitOTP:hover, .btn-SubmitOTP:focus, .btn-SubmitOTP:active, .btn-SubmitOTP.active, .open > .dropdown-toggle.btn-SubmitOTP {
+    background: #1b3a75;
+}
+.loginButton:hover, .loginButton:focus, .loginButton:active, .loginButton.active, .open > .dropdown-toggle.loginButton {
+    background: #213a69;
+}
